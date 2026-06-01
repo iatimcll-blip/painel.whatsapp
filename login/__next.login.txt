@@ -2,4 +2,4 @@
 2:I[39756,["/painel.whatsapp/_next/static/chunks/01xlw8hd842-c.js","/painel.whatsapp/_next/static/chunks/0d3shmwh5_nmn.js"],"default"]
 3:I[37457,["/painel.whatsapp/_next/static/chunks/01xlw8hd842-c.js","/painel.whatsapp/_next/static/chunks/0d3shmwh5_nmn.js"],"default"]
 4:[]
-0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"mrCaV2CiKifHq3sG8KWZN"}
+0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"b7EUFrOOnD7ns8a54WbOT"}
