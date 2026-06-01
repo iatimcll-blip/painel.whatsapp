@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { QRCodeSVG } from 'qrcode.react'
 
 type AmazonCallback = {
   code: string | null
@@ -13,6 +14,7 @@ type AmazonCallback = {
 const amazonClientId = process.env.NEXT_PUBLIC_AMAZON_LOGIN_CLIENT_ID || ''
 const configuredRedirectUri = process.env.NEXT_PUBLIC_AMAZON_LOGIN_REDIRECT_URI || ''
 const alexaSkillId = process.env.NEXT_PUBLIC_ALEXA_SKILL_ID || ''
+const whatsappWebUrl = 'https://web.whatsapp.com/'
 
 function randomState() {
   if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
@@ -60,7 +62,7 @@ export default function IntegracoesPage() {
   }
 
   function abrirWhatsAppWeb() {
-    window.open('https://web.whatsapp.com/', '_blank', 'noopener,noreferrer')
+    window.open(whatsappWebUrl, '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -150,6 +152,25 @@ export default function IntegracoesPage() {
               O WhatsApp Web bloqueia carregamento dentro de sites externos por política de segurança do navegador.
               Mantive a área de operação pronta com abertura em nova aba e uma tentativa visual controlada.
             </p>
+
+            <div className="whatsapp-qr-panel">
+              <div className="whatsapp-qr-box" aria-label="QR Code para abrir WhatsApp Web">
+                <QRCodeSVG
+                  value={whatsappWebUrl}
+                  size={176}
+                  bgColor="#ffffff"
+                  fgColor="#0d0814"
+                  marginSize={2}
+                />
+              </div>
+              <div>
+                <strong>QR Code habilitado</strong>
+                <span>
+                  Escaneie para abrir o WhatsApp Web. Para conectar a conta, abra WhatsApp no celular,
+                  entre em Aparelhos conectados e escaneie o QR oficial exibido na aba do WhatsApp Web.
+                </span>
+              </div>
+            </div>
 
             <div className="whatsapp-toolbar">
               <button type="button" className="btn-primary integration-action" onClick={abrirWhatsAppWeb}>
