@@ -43,3 +43,7 @@ O projeto esta configurado para export estatico com Next.js. Para validar antes 
 npm run lint
 npm run build
 ```
+
+O site publicado fica na branch `gh-pages`, servida pelo GitHub Pages:
+
+https://iatimcll-blip.github.io/painel.whatsapp/
