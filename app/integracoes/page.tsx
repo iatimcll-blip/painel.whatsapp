@@ -68,19 +68,19 @@ export default function IntegracoesPage() {
     <div className="app-shell integrations-shell">
       <aside className="app-sidebar" style={{ width: 230, background: 'rgba(0,0,0,0.4)', borderRight: '1px solid rgba(255,255,255,0.06)', padding: '24px 16px', display: 'flex', flexDirection: 'column', gap: 8, flexShrink: 0 }}>
         <div className="sidebar-brand" style={{ marginBottom: 20, padding: '0 8px' }}>
-          <div style={{ fontSize: 18, fontWeight: 800, color: '#f0e6ff' }}>Painel</div>
-          <div style={{ fontSize: 11, color: 'rgba(240,230,255,0.4)', marginTop: 4 }}>Integracoes</div>
+          <div style={{ fontSize: 18, fontWeight: 800, color: '#f0e6ff' }}>Painel Whatsapp</div>
+          <div style={{ fontSize: 11, color: 'rgba(240,230,255,0.4)', marginTop: 4 }}>WhatsApp Web</div>
         </div>
-        <div className="nav-link active">Integracoes</div>
+        <div className="nav-link active">Painel Whatsapp</div>
         <Link href="/login" style={{ textDecoration: 'none', marginTop: 'auto' }}><div className="nav-link">Sair</div></Link>
       </aside>
 
       <main className="app-main integrations-main">
         <div className="page-header integrations-header">
           <div>
-            <p className="integrations-eyebrow">Amazon Alexa + WhatsApp Web</p>
-            <h1><span className="gradient-text">Central de Integracoes</span></h1>
-            <p>Conecte contas Amazon/Alexa e acesse o WhatsApp Web por um fluxo seguro.</p>
+            <p className="integrations-eyebrow">WhatsApp Web + Amazon Alexa</p>
+            <h1><span className="gradient-text">Painel Whatsapp</span></h1>
+            <p>Acesse o WhatsApp Web pelo painel e mantenha a integracao com Alexa preparada para configuracao.</p>
           </div>
           <div className="integration-status-pill">Configuracao inicial</div>
         </div>

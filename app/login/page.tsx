@@ -29,7 +29,7 @@ export default function LoginPage() {
     setMensagem('')
 
     if (DEMO_MODE) {
-      router.push('/integracoes')
+      router.push('/painel')
       return
     }
 
@@ -42,7 +42,7 @@ export default function LoginPage() {
       return
     }
 
-    router.push('/integracoes')
+    router.push('/painel')
     router.refresh()
   }
 
