@@ -38,7 +38,6 @@ export default function IntegracoesPage() {
       errorDescription: params.get('error_description'),
     }
   })
-  const [iframeTentativa, setIframeTentativa] = useState(false)
 
   const amazonReady = Boolean(amazonClientId)
 
@@ -70,9 +69,9 @@ export default function IntegracoesPage() {
       <aside className="app-sidebar" style={{ width: 230, background: 'rgba(0,0,0,0.4)', borderRight: '1px solid rgba(255,255,255,0.06)', padding: '24px 16px', display: 'flex', flexDirection: 'column', gap: 8, flexShrink: 0 }}>
         <div className="sidebar-brand" style={{ marginBottom: 20, padding: '0 8px' }}>
           <div style={{ fontSize: 18, fontWeight: 800, color: '#f0e6ff' }}>Painel</div>
-          <div style={{ fontSize: 11, color: 'rgba(240,230,255,0.4)', marginTop: 4 }}>Integrações</div>
+          <div style={{ fontSize: 11, color: 'rgba(240,230,255,0.4)', marginTop: 4 }}>Integracoes</div>
         </div>
-        <div className="nav-link active">Integrações</div>
+        <div className="nav-link active">Integracoes</div>
         <Link href="/login" style={{ textDecoration: 'none', marginTop: 'auto' }}><div className="nav-link">Sair</div></Link>
       </aside>
 
@@ -80,10 +79,10 @@ export default function IntegracoesPage() {
         <div className="page-header integrations-header">
           <div>
             <p className="integrations-eyebrow">Amazon Alexa + WhatsApp Web</p>
-            <h1><span className="gradient-text">Central de Integrações</span></h1>
-            <p>Conecte contas Amazon/Alexa e acompanhe o acesso ao WhatsApp Web em uma área dedicada do painel.</p>
+            <h1><span className="gradient-text">Central de Integracoes</span></h1>
+            <p>Conecte contas Amazon/Alexa e acesse o WhatsApp Web por um fluxo seguro.</p>
           </div>
-          <div className="integration-status-pill">Configuração inicial</div>
+          <div className="integration-status-pill">Configuracao inicial</div>
         </div>
 
         <section className="integrations-grid">
@@ -99,8 +98,8 @@ export default function IntegracoesPage() {
             </div>
 
             <p>
-              Este botão inicia o OAuth da Amazon. Depois que a Amazon retornar o código de autorização,
-              a próxima etapa é trocar esse código por tokens em um backend seguro.
+              Este botao inicia o OAuth da Amazon. Depois que a Amazon retornar o codigo de autorizacao,
+              a proxima etapa e trocar esse codigo por tokens em um backend seguro.
             </p>
 
             <div className="integration-config-list">
@@ -110,7 +109,7 @@ export default function IntegracoesPage() {
               </div>
               <div>
                 <span>Redirect URI</span>
-                <strong>{configuredRedirectUri || 'A URL atual /integracoes será usada no navegador'}</strong>
+                <strong>{configuredRedirectUri || 'A URL atual /integracoes sera usada no navegador'}</strong>
               </div>
               <div>
                 <span>Alexa Skill</span>
@@ -126,7 +125,7 @@ export default function IntegracoesPage() {
 
             {callback.code && (
               <div className="integration-alert success">
-                Código Amazon recebido. Estado: {callback.state || 'sem state'}. Agora falta a troca segura por token no servidor.
+                Codigo Amazon recebido. Estado: {callback.state || 'sem state'}. Agora falta a troca segura por token no servidor.
               </div>
             )}
 
@@ -143,21 +142,21 @@ export default function IntegracoesPage() {
             <div className="integration-card-header">
               <div>
                 <span className="integration-label">WhatsApp Web</span>
-                <h2>Operação dentro do painel</h2>
+                <h2>Operacao com QR Code</h2>
               </div>
-              <span className="integration-badge blocked">Embed limitado</span>
+              <span className="integration-badge ready">QR Code ativo</span>
             </div>
 
             <p>
-              O WhatsApp Web bloqueia carregamento dentro de sites externos por política de segurança do navegador.
-              Mantive a área de operação pronta com abertura em nova aba e uma tentativa visual controlada.
+              O WhatsApp Web nao permite ser carregado dentro de outro site. Por isso, removi a tela bloqueada
+              e deixei o caminho correto: abrir o WhatsApp Web oficial e escanear o QR exibido por ele.
             </p>
 
-            <div className="whatsapp-qr-panel">
+            <div className="whatsapp-qr-panel whatsapp-qr-panel-large">
               <div className="whatsapp-qr-box" aria-label="QR Code para abrir WhatsApp Web">
                 <QRCodeSVG
                   value={whatsappWebUrl}
-                  size={176}
+                  size={224}
                   bgColor="#ffffff"
                   fgColor="#0d0814"
                   marginSize={2}
@@ -176,34 +175,16 @@ export default function IntegracoesPage() {
               <button type="button" className="btn-primary integration-action" onClick={abrirWhatsAppWeb}>
                 Abrir WhatsApp Web
               </button>
-              <button type="button" className="integration-ghost-button" onClick={() => setIframeTentativa(true)}>
-                Tentar carregar aqui
-              </button>
-            </div>
-
-            <div className="whatsapp-frame-shell">
-              {iframeTentativa ? (
-                <iframe
-                  title="WhatsApp Web"
-                  src="https://web.whatsapp.com/"
-                  className="whatsapp-frame"
-                />
-              ) : (
-                <div className="whatsapp-placeholder">
-                  <strong>WhatsApp Web</strong>
-                  <span>Use o botão acima para abrir e escanear o QR Code em uma aba segura.</span>
-                </div>
-              )}
             </div>
           </article>
         </section>
 
         <section className="glass-sm integration-notes">
-          <h2>Próximas etapas técnicas</h2>
+          <h2>Proximas etapas tecnicas</h2>
           <div className="integration-steps">
             <div>
               <strong>1. Registrar Login with Amazon</strong>
-              <span>Criar o Security Profile na Amazon e cadastrar a Redirect URI desta página.</span>
+              <span>Criar o Security Profile na Amazon e cadastrar a Redirect URI desta pagina.</span>
             </div>
             <div>
               <strong>2. Criar backend de tokens</strong>
@@ -211,11 +192,11 @@ export default function IntegracoesPage() {
             </div>
             <div>
               <strong>3. Vincular Alexa Skill</strong>
-              <span>Configurar Account Linking na skill para associar a conta Alexa à conta interna.</span>
+              <span>Configurar Account Linking na skill para associar a conta Alexa a conta interna.</span>
             </div>
             <div>
               <strong>4. WhatsApp oficial</strong>
-              <span>Para automação real, usar WhatsApp Business Platform/API em vez de controlar WhatsApp Web embutido.</span>
+              <span>Para automacao real, usar WhatsApp Business Platform/API em vez de controlar WhatsApp Web embutido.</span>
             </div>
           </div>
         </section>
