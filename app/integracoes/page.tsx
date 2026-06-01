@@ -144,16 +144,16 @@ export default function IntegracoesPage() {
                 <span className="integration-label">WhatsApp Web</span>
                 <h2>Operacao com QR Code</h2>
               </div>
-              <span className="integration-badge ready">QR Code ativo</span>
+              <span className="integration-badge ready">QR WhatsApp Web</span>
             </div>
 
             <p>
-              O WhatsApp Web nao permite ser carregado dentro de outro site. Por isso, removi a tela bloqueada
-              e deixei o caminho correto: abrir o WhatsApp Web oficial e escanear o QR exibido por ele.
+              Este QR Code aponta diretamente para o WhatsApp Web oficial. Ao abrir o WhatsApp Web,
+              ele exibira o QR dinamico de pareamento para conectar a conta.
             </p>
 
             <div className="whatsapp-qr-panel whatsapp-qr-panel-large">
-              <div className="whatsapp-qr-box" aria-label="QR Code para abrir WhatsApp Web">
+              <div className="whatsapp-qr-box" aria-label="QR Code do WhatsApp Web">
                 <QRCodeSVG
                   value={whatsappWebUrl}
                   size={224}
@@ -163,10 +163,10 @@ export default function IntegracoesPage() {
                 />
               </div>
               <div>
-                <strong>QR Code habilitado</strong>
+                <strong>QR Code do WhatsApp Web</strong>
                 <span>
-                  Escaneie para abrir o WhatsApp Web. Para conectar a conta, abra WhatsApp no celular,
-                  entre em Aparelhos conectados e escaneie o QR oficial exibido na aba do WhatsApp Web.
+                  Destino do QR: https://web.whatsapp.com/. Depois que a pagina oficial abrir,
+                  use WhatsApp no celular em Aparelhos conectados para escanear o QR de pareamento exibido pelo WhatsApp.
                 </span>
               </div>
             </div>
