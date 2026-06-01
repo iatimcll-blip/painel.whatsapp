@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 
 type AmazonCallback = {
@@ -38,19 +38,15 @@ export default function IntegracoesPage() {
   })
   const [iframeTentativa, setIframeTentativa] = useState(false)
 
-  const redirectUri = useMemo(() => {
-    if (configuredRedirectUri) return configuredRedirectUri
-    if (typeof window === 'undefined') return ''
-    return `${window.location.origin}/integracoes/`
-  }, [])
-
-  const amazonReady = Boolean(amazonClientId && redirectUri)
+  const amazonReady = Boolean(amazonClientId)
 
   function iniciarLoginAmazon() {
     if (!amazonReady) return
 
     const state = randomState()
     localStorage.setItem('amazon_oauth_state', state)
+    const currentPageUrl = window.location.href.split('?')[0].split('#')[0]
+    const redirectUri = configuredRedirectUri || currentPageUrl
 
     const params = new URLSearchParams({
       client_id: amazonClientId,
@@ -112,7 +108,7 @@ export default function IntegracoesPage() {
               </div>
               <div>
                 <span>Redirect URI</span>
-                <strong>{redirectUri || 'Definir URL de retorno'}</strong>
+                <strong>{configuredRedirectUri || 'A URL atual /integracoes será usada no navegador'}</strong>
               </div>
               <div>
                 <span>Alexa Skill</span>
