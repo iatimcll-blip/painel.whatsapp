@@ -1,9 +1,9 @@
 1:"$Sreact.fragment"
 2:I[47257,["/painel.whatsapp/_next/static/chunks/01xlw8hd842-c.js","/painel.whatsapp/_next/static/chunks/0d3shmwh5_nmn.js"],"ClientPageRoot"]
-3:I[6891,["/painel.whatsapp/_next/static/chunks/01xlw8hd842-c.js","/painel.whatsapp/_next/static/chunks/0d3shmwh5_nmn.js","/painel.whatsapp/_next/static/chunks/0s6572909q5fu.js"],"default"]
+3:I[6891,["/painel.whatsapp/_next/static/chunks/01xlw8hd842-c.js","/painel.whatsapp/_next/static/chunks/0d3shmwh5_nmn.js","/painel.whatsapp/_next/static/chunks/14jaswqxaueot.js"],"default"]
 6:I[97367,["/painel.whatsapp/_next/static/chunks/01xlw8hd842-c.js","/painel.whatsapp/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/painel.whatsapp/_next/static/chunks/0s6572909q5fu.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"VO8m79eYW2u6ll8qdFeZN"}
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/painel.whatsapp/_next/static/chunks/14jaswqxaueot.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"VEztIU2QTpn-RbTR4gKyg"}
 4:{}
 5:"$0:rsc:props:children:0:props:serverProvidedParams:params"
 8:null
